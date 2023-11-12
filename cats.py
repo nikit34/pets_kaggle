@@ -9,7 +9,7 @@ test2 = pd.DataFrame(pets_kaggle.test[pets_kaggle.test['Type'] % 2 == 0])
 Adopttrain = pd.DataFrame(train2[['AdoptionSpeed']])
 ID = pd.DataFrame(test2[['PetID']])
 test2.drop(['PetID'],axis=1, inplace=True)
-train2 = train2.drop(['PetID', 'AdoptionSpeed'], 1)
+train2 = train2.drop(['PetID', 'AdoptionSpeed'], axis=1)
 
 
 parameter_grid = {

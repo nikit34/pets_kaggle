@@ -16,5 +16,3 @@ test.drop(['Name', 'RescuerID', 'VideoAmt', 'PhotoAmt', 'Description'], axis=1, 
 
 train = shuffle(train)
 test = shuffle(test)
-train.fillna(train.mean())
-test.fillna(test.mean())

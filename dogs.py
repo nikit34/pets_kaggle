@@ -10,7 +10,7 @@ test1 = pd.DataFrame(pets_kaggle.test[pets_kaggle.test['Type'] % 2 != 0])
 Adopttrain = pd.DataFrame(train1[['AdoptionSpeed']])
 ID = pd.DataFrame(test1[['PetID']])
 test1.drop(['PetID'], axis=1, inplace=True)
-train1 = train1.drop(['PetID', 'AdoptionSpeed'], 1)
+train1 = train1.drop(['PetID', 'AdoptionSpeed'], axis=1)
 
 parameter_grid = {
     'criterion': ['entropy'],
